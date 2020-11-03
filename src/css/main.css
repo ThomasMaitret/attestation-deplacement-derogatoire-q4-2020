@@ -59,7 +59,7 @@ p {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 #form-profile {
@@ -240,7 +240,6 @@ input[type='number'] {
   font-size: 1.2em;
   font-weight: bold;
   border-radius: 0.5em;
-  transition: 0.1s;
 }
 
 .label-mi {
@@ -350,7 +349,7 @@ input[type='number'] {
   padding: 16px;
   box-shadow: 0 0 8px 1px #fff;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  display: none;
   margin: 2rem auto 0;
   width: fit-content;
 }

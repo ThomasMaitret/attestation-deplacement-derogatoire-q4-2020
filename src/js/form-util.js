@@ -168,7 +168,7 @@ export function prepareInputs(
       downloadBlob(pdfBlob, `attestation-${creationDate}_${creationHour}.pdf`);
     });
 
-    snackbar.classList.remove('d-none');
+    snackbar.classList.remove('hidden');
     setTimeout(() => snackbar.classList.add('show'), 100);
   });
 }
