@@ -103,11 +103,11 @@
       "items": [
         {
           "code": "travail",
-          "label": "Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle ou un établissement d’enseignement ou de formation, déplacements professionnels ne pouvant être différés <a class=\"footnote\" href=\"#footnote2\">[2]</a> , déplacements pour un concours ou un examen."
+          "label": "Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle ou un établissement d’enseignement ou de formation, déplacements professionnels ne pouvant être différés, déplacements pour un concours ou un examen."
         },
         {
           "code": "achats",
-          "label": "Déplacements pour effectuer des achats de fournitures nécessaires à l'activité professionnelle, des achats de première nécessité <a class=\"footnote\" href=\"#footnote3\">[3]</a> dans des établissements dont les activités demeurent autorisées, le retrait de commande et les livraisons à domicile ;"
+          "label": "Déplacements pour effectuer des achats de fournitures nécessaires à l'activité professionnelle, des achats de première nécessité dans des établissements dont les activités demeurent autorisées, le retrait de commande et les livraisons à domicile ;"
         },
         {
           "code": "sante",
