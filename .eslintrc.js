@@ -5,7 +5,4 @@ module.exports = {
     browser: true,
   },
   extends: ['eslint:recommended'],
-  parserOptions: {
-    parser: 'babel-eslint',
-  },
 };
