@@ -28,6 +28,7 @@
     "remove-accents": "^0.4.2"
   },
   "browserslist": [
-    "last 2 versions"
+    "last 2 chrome version",
+    "last 2 firefox version"
   ]
 }
