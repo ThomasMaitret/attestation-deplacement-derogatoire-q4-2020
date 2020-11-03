@@ -6,11 +6,9 @@
   "scripts": {
     "start": "cross-env VERSION=localversion parcel ./src/index.html",
     "clean:dist": "rimraf dist",
-    "prebuild": "run-p lint clean:dist",
     "build:simple": "cross-env-shell VERSION=$npm_package_version parcel build --public-url $PUBLIC_URL ./src/index.html",
     "build": "cross-env npm run build:simple",
     "postbuild": "cross-env-shell react-snap",
-    "prebuild:ci": "run-p lint clean:dist",
     "build:ci": "cross-env npm run build:simple",
     "postbuild:ci": "cross-env-shell react-snap",
     "build:dev": "cross-env PUBLIC_URL='/' npm run build:simple",
