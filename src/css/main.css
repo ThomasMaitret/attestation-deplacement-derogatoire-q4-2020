@@ -17,8 +17,6 @@ html {
 body {
   margin: 1.25em;
   background: white;
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
-    env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,6 +59,7 @@ p {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2rem;
 }
 
 #form-profile {
@@ -347,17 +346,13 @@ input[type='number'] {
   min-width: 250px;
   color: #fff;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 5px;
   padding: 16px;
-  position: fixed;
-  z-index: 1;
-  left: 12%;
-  bottom: 30px;
-  font-size: 17px;
-  transform: translateX(-50%);
   box-shadow: 0 0 8px 1px #fff;
   opacity: 0;
   transition: all 0.5s ease-in-out;
+  margin: 2rem auto 0;
+  width: fit-content;
 }
 
 #snackbar.show {
@@ -404,7 +399,6 @@ input[type='number'] {
   border: none;
   background-color: #000;
   color: #fff;
-  margin-bottom: 2rem;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -170,11 +170,6 @@ export function prepareInputs(
 
     snackbar.classList.remove('d-none');
     setTimeout(() => snackbar.classList.add('show'), 100);
-
-    setTimeout(function () {
-      snackbar.classList.remove('show');
-      setTimeout(() => snackbar.classList.add('d-none'), 500);
-    }, 6000);
   });
 }
 

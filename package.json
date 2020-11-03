@@ -4,7 +4,7 @@
   "description": "Générateur d'attestation de déplacement dérogatoire'",
   "main": "main.js",
   "scripts": {
-    "start": "rimraf dist && parcel ./src/index.html",
+    "start": "rimraf dist && parcel serve ./src/index.html",
     "build": "rimraf dist && parcel build --no-source-maps ./src/index.html",
     "serve": "npm run build && npx http-server dist"
   },

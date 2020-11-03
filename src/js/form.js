@@ -25,7 +25,6 @@ const getCurrentTime = () => {
 
 const createFormGroup = ({
   autocomplete = false,
-  autofocus = false,
   inputmode,
   label,
   max,
@@ -50,7 +49,6 @@ const createFormGroup = ({
   });
   const inputAttrs = {
     autocomplete,
-    autofocus,
     className: 'form-control',
     id: `field-${name}`,
     inputmode,
@@ -155,7 +153,6 @@ export function createForm() {
     .filter((field) => !field.isHidden)
     .map((field, index) => {
       const formGroup = createFormGroup({
-        autofocus: index === 0,
         ...field,
         name: field.key,
       });
