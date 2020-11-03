@@ -2,19 +2,12 @@
   "name": "attestation-derogatoire-de-deplacement",
   "version": "1.0.5",
   "description": "Générateur d'attestation de déplacement dérogatoire'",
-  "main": "certificate.js",
+  "main": "main.js",
   "scripts": {
-    "start": "cross-env VERSION=localversion parcel ./src/index.html",
+    "start": "parcel ./src/index.html",
     "clean:dist": "rimraf dist",
-    "build:simple": "cross-env-shell VERSION=$npm_package_version parcel build --public-url $PUBLIC_URL ./src/index.html",
-    "build": "cross-env npm run build:simple",
-    "postbuild": "cross-env-shell react-snap",
-    "build:ci": "cross-env npm run build:simple",
-    "postbuild:ci": "cross-env-shell react-snap",
-    "build:dev": "cross-env PUBLIC_URL='/' npm run build:simple",
-    "preserve": "npm run build",
-    "serve": "serve dist",
-    "serve:dist": "serve dist"
+    "build": "parcel build ./src/index.html",
+    "serve": "serve dist"
   },
   "repository": {
     "type": "git",
@@ -44,7 +37,6 @@
     "postcss-preset-env": "^6.7.0",
     "posthtml-expressions": "^1.6.0",
     "prettier": "^2.1.2",
-    "react-snap": "^1.23.0",
     "rimraf": "^3.0.2",
     "serve": "^11.3.2"
   },
@@ -56,16 +48,5 @@
   },
   "browserslist": [
     "last 2 versions"
-  ],
-  "reactSnap": {
-    "source": "dist",
-    "minifyHtml": {
-      "collapseWhitespace": false,
-      "removeComments": false
-    },
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ]
-  }
+  ]
 }
