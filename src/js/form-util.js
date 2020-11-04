@@ -94,8 +94,7 @@ export function prepareInputs(
   formInputs,
   reasonInputs,
   reasonFieldset,
-  reasonAlert,
-  snackbar
+  reasonAlert
 ) {
   formInputs.forEach((input) => {
     const cachedValue = localStorage.getItem(input.name);
@@ -106,7 +105,7 @@ export function prepareInputs(
     const exempleElt = input.parentNode.parentNode.querySelector('.exemple');
     const validitySpan = input.parentNode.parentNode.querySelector('.validity');
     if (input.placeholder && exempleElt) {
-      input.addEventListener('input', (event) => {
+      input.addEventListener('input', () => {
         if (input.value) {
           exempleElt.innerHTML = 'ex.&nbsp;: ' + input.placeholder;
           validitySpan.removeAttribute('hidden');
@@ -166,10 +165,9 @@ export function prepareInputs(
         .replace(':', '-');
 
       downloadBlob(pdfBlob, `attestation-${creationDate}_${creationHour}.pdf`);
-    });
 
-    snackbar.classList.remove('hidden');
-    setTimeout(() => snackbar.classList.add('show'), 100);
+      window.alert("L'attestation est téléchargée sur votre appareil.");
+    });
   });
 }
 
@@ -183,17 +181,10 @@ function cacheFormValue(formInputs) {
 
 export function prepareForm() {
   const formInputs = $$('#form-profile input');
-  const snackbar = $('#snackbar');
   const reasonInputs = [...$$('input[name="field-reason"]')];
   const reasonFieldset = $('#reason-fieldset');
   const reasonAlert = reasonFieldset.querySelector('.msg-alert');
   const releaseDateInput = $('#field-datesortie');
   setReleaseDateTime(releaseDateInput);
-  prepareInputs(
-    formInputs,
-    reasonInputs,
-    reasonFieldset,
-    reasonAlert,
-    snackbar
-  );
+  prepareInputs(formInputs, reasonInputs, reasonFieldset, reasonAlert);
 }
